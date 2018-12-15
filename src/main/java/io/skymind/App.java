@@ -69,13 +69,13 @@ public class App extends JFrame {
                     int blue  = (color >>>  0) & 0xFF;
 
                     float luminance = (red * 0.2126f + green * 0.7152f + blue * 0.0722f) / 255;
-                    pixels[(x * 28) + y] = luminance;
+                    pixels[(y * 28) + x] = luminance;
                 }
             }
 
             for (int y = 0; y < 28; y++) {
                 for (int x = 0; x < 28; x++) {
-                    System.out.print(pixels[(x * 28) + y]);
+                    System.out.print(pixels[(y * 28) + x]);
                 }
                 System.out.println();
             }
